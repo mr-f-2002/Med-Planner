@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/outline_home_24"
+        android:title="Medicines" />
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/baseline_warning_amber_24"
+        android:title="Stock Status" />
+    <item
+        android:id="@+id/alarm"
+        android:icon="@drawable/baseline_access_alarms_24"
+        android:title="Alarm" />
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/baseline_map_24"
+        android:title="Maps" />
+
+</menu>

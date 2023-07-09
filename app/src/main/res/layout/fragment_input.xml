@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:foregroundGravity="center"
+    app:cardElevation="20dp"
+    app:layout_anchorGravity="center"
+    tools:context=".InputFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="288dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="#78909C"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pickImage" />
+
+        <Button
+            android:id="@+id/cnclBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/taken_btn"
+            android:text="@string/cancel"
+            app:layout_constraintStart_toStartOf="@+id/noonSwitch"
+            app:layout_constraintTop_toBottomOf="@+id/nightSwitch"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/taken_btn"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="@+id/cnclBtn"
+            app:layout_constraintEnd_toEndOf="@+id/noonSwitch"
+            app:layout_constraintTop_toTopOf="@+id/cnclBtn"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/editTextNumberDecimal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/stock"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:textColorHint="#78909C"
+            app:layout_constraintEnd_toEndOf="@+id/editTextText"
+            app:layout_constraintStart_toStartOf="@+id/editTextText"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+        <ImageView
+            android:id="@+id/imgBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/hello_blank_fragment"
+            android:scaleType="centerCrop"
+            android:src="@drawable/holder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+
+        <Switch
+            android:id="@+id/morningSwtich"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:minHeight="48dp"
+            android:text="@string/morning"
+            app:layout_constraintEnd_toEndOf="@+id/editTextNumberDecimal"
+            app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:id="@+id/nightSwitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/night"
+            app:layout_constraintEnd_toEndOf="@+id/noonSwitch"
+            app:layout_constraintStart_toStartOf="@+id/noonSwitch"
+            app:layout_constraintTop_toBottomOf="@+id/noonSwitch"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:id="@+id/noonSwitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/noon"
+            app:layout_constraintEnd_toEndOf="@+id/morningSwtich"
+            app:layout_constraintStart_toStartOf="@+id/morningSwtich"
+            app:layout_constraintTop_toBottomOf="@+id/morningSwtich"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/pickImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="68dp"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:padding="0dp"
+            android:src="@drawable/baseline_camera_alt_24"
+            app:layout_constraintStart_toStartOf="@+id/imgBtn"
+            app:layout_constraintTop_toTopOf="@+id/imgBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
